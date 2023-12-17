@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block titulo %}Noticias{% endblock titulo %}
+{% block contenido%}
+    <h2>Aquí están las noticias</h2>
+    {% for noticias in noticias %}
+    <p>{{noticias.titulo}}</p>
+    <p>{{noticias.contenido}}</p>
+    <img src="{{noticias.imagenes.url}}" width="10%">
+    <p>{{noticias.fecha_publicacion}}</p>
+    <p>{{noticias.categoria_noticia}}</p>
+    <br>
+    {% endfor %}
+{% endblock contenido %}
