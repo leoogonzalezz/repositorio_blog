@@ -25,6 +25,7 @@ urlpatterns = [
     path('', views.Home, name='home'),
     path('nosotros/', views.Nosotros, name='nosotros'),
     path('noticias/', include('apps.noticias.urls')),
+    path('contacto/', views.Contacto, name='contacto'),
     # parametro 1 texto de la url
     # parametro 2 vista que se ejecuta
     # parametro 3 nombre de la url
